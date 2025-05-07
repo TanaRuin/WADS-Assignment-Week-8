@@ -3,7 +3,9 @@ import {auth} from '../middleware/auth.js';
 import { register, login, logout } from '../controllers/authController.js';
 import { getProfile, updateProfile } from '../controllers/userController.js';
 
-import router from '../routes/todos.js'
+import express from 'express';
+
+const router = express.Router();
 
 /**
  * @openapi
@@ -28,13 +30,13 @@ import router from '../routes/todos.js'
  *             properties:
  *               email:
  *                 type: string
- *                 example: "samuel23505@gmail.com"
+ *                 example: "vammyjiang@gmail.com"
  *               password:
  *                 type: string
- *                 example: "Samuel235!"
+ *                 example: "Vammy123"
  *               name:
  *                 type: string
- *                 example: "Samuel"
+ *                 example: "Vammy"
  *     responses:
  *       '201':
  *         description: New user registered successfully
@@ -61,10 +63,10 @@ router.post('/signup', register);
  *             properties:
  *               email:
  *                 type: string
- *                 example: "samuel23505@gmail.com"
+ *                 example: "vammyjiang@gmail.com"
  *               password:
  *                 type: string
- *                 example: "Samuel235!"
+ *                 example: "Vammy123!"
  *     responses:
  *       '200':
  *         description: Sign in successfully
