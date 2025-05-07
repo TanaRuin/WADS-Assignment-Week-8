@@ -3,7 +3,7 @@ import {auth} from '../middleware/auth.js';
 import { register, login, logout } from '../controllers/authController.js';
 import { getProfile, updateProfile } from '../controllers/userController.js';
 
-import express from 'express';
+
 
 const router = express.Router();
 

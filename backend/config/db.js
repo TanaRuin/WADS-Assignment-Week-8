@@ -1,10 +1,10 @@
 // db.js (ESM version)
 import { MongoSequelize } from "sequelize-mongodb";
-import dotenv from "dotenv";
+dotenv.config(); 
+import dotenv, { configDotenv } from "dotenv";
 
-dotenv.config();
 
-const sequelize = new MongoSequelize(process.env.CONNECTION_URL);  
+const sequelize = new MongoSequelize(process.env.MONGO_URI);  
 
 const connectDB = async () => {
     try {
